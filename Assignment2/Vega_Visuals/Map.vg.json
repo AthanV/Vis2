@@ -28,7 +28,7 @@
       "lookup": "State",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/AthanV/FIT3179_Vis2/refs/heads/main/Assignment%202/DataSets/New_Australia.json",
+          "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/New_Australia.json",
           "format": {"type": "topojson", "feature": "STE_2016_AUST"}
         },
         "key": "properties.STE_NAME16"
