@@ -61,7 +61,10 @@
           "field": "Trips",
           "type": "quantitative",
           "title": "Number of Trips"
-        }
+        },
+        "tooltip": [
+          {"field": "rank", "type": "quantitative", "title": "Rank"}
+        ]
       }
     },
     {
