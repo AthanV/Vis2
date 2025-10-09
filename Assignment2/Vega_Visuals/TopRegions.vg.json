@@ -61,11 +61,6 @@
           "field": "Trips",
           "type": "quantitative",
           "title": "Number of Trips"
-        },
-        "color": {
-          "field": "Region",
-          "type": "nominal",
-          "legend": null
         }
       }
     },
