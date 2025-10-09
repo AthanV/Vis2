@@ -5,7 +5,7 @@
   "height": 600,
   "description": "Top 5 Most Visited Regions by Selected State",
   "data": {
-    "url": "https://github.com/AthanV/FIT3179_Vis2/blob/main/Assignment%202/DataSets/TopRegions.csv"
+    "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/TopRegions.csv"
   },
   "params": [
     {
