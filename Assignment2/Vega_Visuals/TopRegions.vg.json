@@ -1,11 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top 5 Most Visited Regions by State",
-  "width": 1500,
-  "height": 600,
+  "width": 1200,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "padding": {"left": 150, "right": 20, "top": 20, "bottom": 20},
+  "config": {
+    "axisY": {"labelPadding": 10}
+  },
   "description": "Top 5 Most Visited Regions by Selected State",
   "data": {
-    "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/TopRegions.csv"
+    "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/TopRegions.csv",
+    "format": {"type": "csv", "parse": {"Trips": "number"}}
   },
   "params": [
     {
@@ -13,7 +18,6 @@
       "bind": {
         "input": "select",
         "options": [
-          "Australian Capital Territory",
           "New South Wales",
           "Northern Territory",
           "Queensland",
@@ -22,7 +26,6 @@
           "Western Australia"
         ],
         "labels": [
-          "Australian Capital Territory",
           "New South Wales",
           "Northern Territory",
           "Queensland",
@@ -36,36 +39,49 @@
     }
   ],
   "transform": [
-    {
-      "filter": "datum.State == State_Selection"
-    },
+    {"filter": "datum.State == State_Selection"},
     {
       "window": [{"op": "rank", "as": "rank"}],
       "sort": [{"field": "Trips", "order": "descending"}],
       "groupby": ["State"]
     },
+    {"filter": "datum.rank <= 5"}
+  ],
+  "layer": [
     {
-      "filter": "datum.rank <= 5"
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Region",
+          "type": "ordinal",
+          "title": null,
+          "sort": "-x"
+        },
+        "x": {
+          "field": "Trips",
+          "type": "quantitative",
+          "title": "Number of Trips"
+        },
+        "color": {
+          "field": "Region",
+          "type": "nominal",
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5
+      },
+      "encoding": {
+        "y": {"field": "Region", "type": "ordinal", "sort": "-x"},
+        "x": {"field": "Trips", "type": "quantitative"},
+        "text": {"field": "Trips", "type": "quantitative", "format": ".0f"}
+      }
     }
   ],
-  "mark": "bar",
-  "encoding": {
-    "y": {
-      "field": "Region",
-      "type": "ordinal",
-      "sort": "-x"
-    },
-    "x": {
-      "field": "Trips",
-      "type": "quantitative",
-      "title": "Number of Trips",
-      "axis": {"tickCount": 10}
-    },
-    "color": {
-      "field": "Region",
-      "type": "nominal",
-      "legend": null
-    }
-  },
   "height": {"step": 30}
 }
