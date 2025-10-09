@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Tourism in Australia",
+  "width": 800,
+  "height": 400,
+  "projection": {"type": "mercator"},
+  "params": [
+    {
+      "name": "year_selection",
+      "value": 2016,
+      "bind": {
+        "input": "select",
+        "options": [2010, 2011, 2012, 2013, 2014, 2015, 2016],
+        "labels": ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+        "name": "Select Year: "
+      }
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/AthanV/FIT3179_Vis2/refs/heads/main/Assignment%202/DataSets/Map.csv",
+    "format": {"type": "csv", "parse": {"Year": "number"}}
+  },
+  "transform": [
+    {
+      "filter": "datum.Year == year_selection"
+    },
+    {
+      "lookup": "State",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/AthanV/FIT3179_Vis2/refs/heads/main/Assignment%202/DataSets/New_Australia.json",
+          "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+        },
+        "key": "properties.STE_NAME16"
+      },
+      "as": "geo"
+    }
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "shape": {"field": "geo", "type": "geojson"},
+    "color": {
+      "field": "Visitors per 1000 Residents",
+      "type": "quantitative",
+      "scale": {
+        "type": "threshold",
+        "domain": [5, 10, 20, 30],
+        "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+      }
+    },
+    "tooltip": [
+      {"field": "State", "type": "nominal", "title": "State"},
+      {"field": "Visitors per 1000 Residents", "type": "quantitative"},
+      {"field": "Year", "type": "ordinal"}
+    ]
+  }
+}
