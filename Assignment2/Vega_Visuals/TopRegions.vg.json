@@ -59,8 +59,7 @@
       "field": "Trips",
       "type": "quantitative",
       "title": "Number of Trips",
-      "scale": {"domain": [0, 24000]},
-      "axis": {"tickCount": 13, "values": [0, 2000, 4000, 6000, 8000, 10000, 12000, 14000, 16000, 18000, 20000, 22000, 24000]}
+      "axis": {"tickCount": 10}
     },
     "color": {
       "field": "Region",
