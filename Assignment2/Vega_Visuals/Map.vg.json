@@ -51,7 +51,10 @@
     "tooltip": [
       {"field": "State", "type": "nominal", "title": "State"},
       {"field": "Visitors per 1000 Residents", "type": "quantitative"},
-      {"field": "Year", "type": "ordinal"}
+      {"field": "Year", "type": "ordinal"},
+      {"field": "Trips", "type": "quantitative"},
+      {"field": "Population", "type": "quantitative"}
+      
     ]
   }
 }
