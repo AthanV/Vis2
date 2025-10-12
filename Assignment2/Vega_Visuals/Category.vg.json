@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "params": [
+  {
+    "name": "year_selection",
+    "value": 2016,
+    "bind": {
+      "input": "select",
+      "options": [2010, 2011, 2012, 2013, 2014, 2015, 2016],
+      "labels": ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+      "name": "Select Year: "
+    }
+  }
+],
+"transform": [
+  {"filter": "datum.Year == year_selection"},
+  {
+      "joinaggregate": [
+        {"op": "sum", "field": "Trips", "as": "TotalTrips"}
+      ],
+      "groupby": ["State"]
+    }],
+  "data": {"url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/Tourism_Category.csv"},
+  "layer": [{
+  "mark": "bar",
+  "encoding": {
+    "x": {"aggregate": "sum", "field": "Trips", "title": "Trips"},
+    "y": {"field": "State", "title": null},
+    "color": {"field": "Reason"},
+    "tooltip": [
+  {"field": "Reason", "type": "nominal", "title": "Reason"},
+  {"field": "Trips", "type": "quantitative"}
+   ]
+  } 
+},
+{
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"aggregate": "sum", "field": "Trips"},
+        "y": {"field": "State"},
+        "text": {"field": "TotalTrips", "type": "quantitative", "format": ",.0f"}}}]}
