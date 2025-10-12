@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top 5 Most Visited Regions by State",
-  "width": 800,
-  "height": 600,
+  "width": 500,
+  "height": 300,
   "autosize": {"type": "fit", "contains": "padding"},
   "padding": {"left": 150, "right": 20, "top": 20, "bottom": 20},
   "config": {
@@ -34,7 +34,7 @@
           "Victoria",
           "Western Australia"
         ],
-        "name": "State: "
+        "name": "State Selection: "
       },
       "value": "Victoria"
     }
@@ -56,7 +56,7 @@
           "field": "Region",
           "type": "ordinal",
           "title": null,
-          "sort": "-x"
+          "sort": {"field": "Trips", "order": "descending"}
         },
         "x": {
           "field": "Trips",
@@ -64,7 +64,7 @@
           "title": "Number of Trips"
         },
         "tooltip": [
-          {"field": "rank", "type": "quantitative", "title": "Rank"}
+          {"field": "rank", "type": "quantitative", "title": "Rank", "format": ".0f"}
         ]
       }
     },
@@ -76,7 +76,7 @@
         "dx": 5
       },
       "encoding": {
-        "y": {"field": "Region", "type": "ordinal", "sort": "-x"},
+        "y": {"field": "Region", "type": "ordinal", "sort": {"field": "Trips", "order": "descending"}},
         "x": {"field": "Trips", "type": "quantitative"},
         "text": {"field": "Trips", "type": "quantitative", "format": ".0f"}
       }
