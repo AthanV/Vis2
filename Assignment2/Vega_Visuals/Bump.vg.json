@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 1400,
   "height": 800,
   "description": "Bump chart showing ranking of states by population growth over time",
