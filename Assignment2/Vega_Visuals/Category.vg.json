@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "$schema": "https://cdn.jsdelivr.net/npm/vega-lite@5.1.0",
   "params": [
   {
     "name": "year_selection",
