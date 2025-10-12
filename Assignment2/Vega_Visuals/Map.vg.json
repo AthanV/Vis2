@@ -43,7 +43,7 @@
       "field": "Visitors per 1000 Residents",
       "type": "quantitative",
       "scale": {
-        "type": "threshold",
+        "type": "log",
         "domain": [5, 10, 20, 30],
         "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
       }
