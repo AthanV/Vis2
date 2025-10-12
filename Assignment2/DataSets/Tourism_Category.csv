@@ -1,0 +1,197 @@
+﻿Year,State,Reason,Trips
+2010,ACT,Business,538.2654216
+2010,ACT,Holiday,769.391121
+2010,ACT,Other,118.3861712
+2010,ACT,Visiting,654.6232913
+2010,New South Wales,Business,4044.972515
+2010,New South Wales,Holiday,11493.97582
+2010,New South Wales,Other,1153.863771
+2010,New South Wales,Visiting,8858.525234
+2010,Northern Territory,Business,1069.454302
+2010,Northern Territory,Holiday,3306.028388
+2010,Northern Territory,Other,247.9173775
+2010,Northern Territory,Visiting,1126.304836
+2010,Queensland,Business,3690.477418
+2010,Queensland,Holiday,8271.212391
+2010,Queensland,Other,963.4231072
+2010,Queensland,Visiting,5781.208602
+2010,South Australia,Business,910.1687069
+2010,South Australia,Holiday,2413.592977
+2010,South Australia,Other,293.1543735
+2010,South Australia,Visiting,1521.219132
+2010,Victoria,Business,2742.715893
+2010,Victoria,Holiday,8289.538025
+2010,Victoria,Other,665.5277775
+2010,Victoria,Visiting,5745.63507
+2010,Western Australia,Business,1247.228139
+2010,Western Australia,Holiday,2432.823857
+2010,Western Australia,Other,335.4838193
+2010,Western Australia,Visiting,1515.14666
+2011,ACT,Business,544.9438422
+2011,ACT,Holiday,519.7489942
+2011,ACT,Other,117.2551307
+2011,ACT,Visiting,617.4395517
+2011,New South Wales,Business,4797.25079
+2011,New South Wales,Holiday,11261.45393
+2011,New South Wales,Other,1185.807126
+2011,New South Wales,Visiting,9330.330683
+2011,Northern Territory,Business,1061.889038
+2011,Northern Territory,Holiday,3018.141436
+2011,Northern Territory,Other,242.3293401
+2011,Northern Territory,Visiting,1298.768891
+2011,Queensland,Business,3688.546713
+2011,Queensland,Holiday,7993.7475
+2011,Queensland,Other,905.4114737
+2011,Queensland,Visiting,6114.470461
+2011,South Australia,Business,1050.031456
+2011,South Australia,Holiday,2559.051106
+2011,South Australia,Other,325.8422958
+2011,South Australia,Visiting,1670.005688
+2011,Victoria,Business,3041.206153
+2011,Victoria,Holiday,8801.299759
+2011,Victoria,Other,729.6129843
+2011,Victoria,Visiting,6150.302633
+2011,Western Australia,Business,1393.303056
+2011,Western Australia,Holiday,2658.795488
+2011,Western Australia,Other,363.022504
+2011,Western Australia,Visiting,1762.206367
+2012,ACT,Business,618.1387293
+2012,ACT,Holiday,462.4398744
+2012,ACT,Other,98.2526428
+2012,ACT,Visiting,758.4780448
+2012,New South Wales,Business,4399.394553
+2012,New South Wales,Holiday,11308.64748
+2012,New South Wales,Other,1047.66185
+2012,New South Wales,Visiting,9962.375416
+2012,Northern Territory,Business,1121.626371
+2012,Northern Territory,Holiday,3118.962404
+2012,Northern Territory,Other,225.4641523
+2012,Northern Territory,Visiting,1389.595263
+2012,Queensland,Business,3405.102962
+2012,Queensland,Holiday,8445.139756
+2012,Queensland,Other,1056.198814
+2012,Queensland,Visiting,6746.524652
+2012,South Australia,Business,1097.48816
+2012,South Australia,Holiday,2512.499198
+2012,South Australia,Other,326.7163269
+2012,South Australia,Visiting,1637.612994
+2012,Victoria,Business,3040.306425
+2012,Victoria,Holiday,8894.02454
+2012,Victoria,Other,714.1374658
+2012,Victoria,Visiting,6453.058164
+2012,Western Australia,Business,1553.283522
+2012,Western Australia,Holiday,2778.940364
+2012,Western Australia,Other,303.2475182
+2012,Western Australia,Visiting,2018.522124
+2013,ACT,Business,583.1984817
+2013,ACT,Holiday,642.0414234
+2013,ACT,Other,103.65994
+2013,ACT,Visiting,707.2828182
+2013,New South Wales,Business,4579.899274
+2013,New South Wales,Holiday,11784.49975
+2013,New South Wales,Other,1233.395793
+2013,New South Wales,Visiting,9926.879214
+2013,Northern Territory,Business,1035.411763
+2013,Northern Territory,Holiday,3199.687249
+2013,Northern Territory,Other,195.5222542
+2013,Northern Territory,Visiting,1390.976637
+2013,Queensland,Business,3472.273094
+2013,Queensland,Holiday,8362.109233
+2013,Queensland,Other,908.0567298
+2013,Queensland,Visiting,6511.311499
+2013,South Australia,Business,968.7148157
+2013,South Australia,Holiday,2567.098241
+2013,South Australia,Other,384.2641151
+2013,South Australia,Visiting,1725.041972
+2013,Victoria,Business,3052.687855
+2013,Victoria,Holiday,8947.253232
+2013,Victoria,Other,702.2371838
+2013,Victoria,Visiting,6745.15609
+2013,Western Australia,Business,1568.830548
+2013,Western Australia,Holiday,3033.432607
+2013,Western Australia,Other,363.3598312
+2013,Western Australia,Visiting,2074.65292
+2014,ACT,Business,512.8450564
+2014,ACT,Holiday,568.0714373
+2014,ACT,Other,115.9373122
+2014,ACT,Visiting,760.077692
+2014,New South Wales,Business,4983.539268
+2014,New South Wales,Holiday,11529.72759
+2014,New South Wales,Other,1314.237643
+2014,New South Wales,Visiting,10941.87469
+2014,Northern Territory,Business,1155.713399
+2014,Northern Territory,Holiday,3297.442974
+2014,Northern Territory,Other,257.3904529
+2014,Northern Territory,Visiting,1612.292222
+2014,Queensland,Business,4168.144589
+2014,Queensland,Holiday,7990.17349
+2014,Queensland,Other,1013.4332
+2014,Queensland,Visiting,6779.210218
+2014,South Australia,Business,1033.759963
+2014,South Australia,Holiday,2429.419342
+2014,South Australia,Other,329.6190934
+2014,South Australia,Visiting,1892.120121
+2014,Victoria,Business,3639.521807
+2014,Victoria,Holiday,9370.31005
+2014,Victoria,Other,998.8381317
+2014,Victoria,Visiting,7657.14987
+2014,Western Australia,Business,2172.249082
+2014,Western Australia,Holiday,3009.159359
+2014,Western Australia,Other,443.3223146
+2014,Western Australia,Visiting,2536.238728
+2015,ACT,Business,655.9758768
+2015,ACT,Holiday,552.5130269
+2015,ACT,Other,174.2063895
+2015,ACT,Visiting,812.2994987
+2015,New South Wales,Business,5578.684956
+2015,New South Wales,Holiday,12012.77018
+2015,New South Wales,Other,1474.951745
+2015,New South Wales,Visiting,11016.69512
+2015,Northern Territory,Business,1406.973426
+2015,Northern Territory,Holiday,3924.403924
+2015,Northern Territory,Other,284.853733
+2015,Northern Territory,Visiting,1895.876171
+2015,Queensland,Business,4829.126085
+2015,Queensland,Holiday,8282.920333
+2015,Queensland,Other,1156.106373
+2015,Queensland,Visiting,7267.820835
+2015,South Australia,Business,1194.048349
+2015,South Australia,Holiday,2816.930451
+2015,South Australia,Other,355.1363525
+2015,South Australia,Visiting,2028.567722
+2015,Victoria,Business,3875.660102
+2015,Victoria,Holiday,9970.008989
+2015,Victoria,Other,1092.056239
+2015,Victoria,Visiting,7850.82961
+2015,Western Australia,Business,2555.686876
+2015,Western Australia,Holiday,3400.206993
+2015,Western Australia,Other,446.9494905
+2015,Western Australia,Visiting,2478.548885
+2016,ACT,Business,754.8473044
+2016,ACT,Holiday,732.627117
+2016,ACT,Other,175.2399158
+2016,ACT,Visiting,796.1860267
+2016,New South Wales,Business,5611.21637
+2016,New South Wales,Holiday,13021.3989
+2016,New South Wales,Other,1655.409087
+2016,New South Wales,Visiting,11096.42307
+2016,Northern Territory,Business,1492.678826
+2016,Northern Territory,Holiday,3862.377952
+2016,Northern Territory,Other,301.9405278
+2016,Northern Territory,Visiting,1717.768172
+2016,Queensland,Business,4649.91638
+2016,Queensland,Holiday,9109.65488
+2016,Queensland,Other,1199.412639
+2016,Queensland,Visiting,7627.95082
+2016,South Australia,Business,1366.659067
+2016,South Australia,Holiday,2806.079307
+2016,South Australia,Other,460.1510026
+2016,South Australia,Visiting,2074.78984
+2016,Victoria,Business,3807.561255
+2016,Victoria,Holiday,10352.66114
+2016,Victoria,Other,1169.492723
+2016,Victoria,Visiting,7914.699136
+2016,Western Australia,Business,2801.290407
+2016,Western Australia,Holiday,4001.54851
+2016,Western Australia,Other,510.2389798
+2016,Western Australia,Visiting,2927.096396
