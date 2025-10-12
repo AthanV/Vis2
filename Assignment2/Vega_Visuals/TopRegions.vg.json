@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top 5 Most Visited Regions by State",
-  "width": 1200,
+  "width": 800,
+  "height": 600,
   "autosize": {"type": "fit", "contains": "padding"},
   "padding": {"left": 150, "right": 20, "top": 20, "bottom": 20},
   "config": {
@@ -33,7 +34,7 @@
           "Victoria",
           "Western Australia"
         ],
-        "name": "State Selection: "
+        "name": "State: "
       },
       "value": "Victoria"
     }
