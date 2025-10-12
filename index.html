@@ -1,40 +1,122 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <title>Multiple Visualisations | An Example</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-  <!-- Import vega-embed -->
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="Assignment2/CSS/Styles.css" media="all">
-  
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+
 </head>
+
 <body>
 
-<h1>Tourism of Australia</h1>
+  <div class="page">
 
-<h2>Proportion of Tourism by State</h2>
-<div id="choropleth_map"></div>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>Tourism in Australia</h1>
+      </div>
+    </div>
+    <!-- end pure grid group -->
 
-<h2>Popular Regions</h2>
-<div id="bar_chart"></div>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-5">
+        <div class="description description-left">
+          <p>The following chloropleth map shows the distribution of tourism across Australia as a proportion of each state's respective
+            population.  </p>
+        </div>
+      </div>
+      <div class="pure-u-3-5">
+        <div id="vis1" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-5">
+        <div class = "description description-right">
+        <p> to other states, Northern Territory has the highest proportion of tourism over the time period. <p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
 
-<script type="text/javascript">
-  
-  var vis1 = "Assignment2/Vega_Visuals/Map.vg.json";
-  
-  vegaEmbed('#choropleth_map', vis1).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  var vis2 = "Assignment2/Vega_Visuals/TopRegions.vg.json";
-  
-  vegaEmbed('#bar_chart', vis2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+        <div id = "vis2" class="vis-container"></div>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis3" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
 
+    <!-- pure grid group -->
+   <div class="pure-g">
+  <div class="pure-u-1-2">
+    <div class="description description-left">
+    <div id = "vis4" class="vis-container"></div>
+    </div>
+  </div>
+  <div class="pure-u-1-2">
+    <div id="vis5" class="vis-container"></div>
+  </div>
+<!-- end pure grid group -->
+
+    </div>
+    <!-- end pure grid group -->
+
+    <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation is created by <a href="https://github.com/AthanV/Vis2" target="_blank">Athan
+            Vass</a>. The datasource is <a href="#" target="_blank">some data repository online</a>.</p>
+      </div>
+    </div>
+
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var specVis1 = "Assignment2/Vega_Visuals/Map.vg.json";
+    var specVis2 = "Assignment2/Vega_Visuals/Bump.vg.json";
+    var specVis3 = "Assignment2/Vega_Visuals/TopRegions.vg.json";
+    var specVis4 = "Assignment2/Vega_Visuals/Category.vg.json";
+    var specVis5 = "Assignment2/Vega_Visuals/Heatmap.vg.json";
+
+    vegaEmbed('#vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+  </script>
 </body>
+
 </html>
