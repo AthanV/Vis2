@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Quarterly Tourism Performance",
+  "data": {"url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/Heatmap.csv"},
+  "width": 500,
+  "height": 300,
+  "transform": [
+    {
+      "calculate": "quarter(datum.Quarter)",
+      "as": "QuarterNum"
+    },
+    {
+      "calculate": "'Q' + datum.QuarterNum",
+      "as": "QuarterLabel"
+    }
+  ],
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "QuarterLabel",
+      "type": "ordinal",
+      "title": null,
+      "sort": ["Q1", "Q2", "Q3", "Q4"],
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": null
+    },
+    "color": {
+      "field": "Trips",
+      "type": "quantitative",
+      "title": "Total Trips",
+      "scale": {"scheme": "blues"}
+    },
+    "tooltip": [
+      {"field": "Year", "type": "ordinal"},
+      {"field": "Trips", "type": "quantitative", "format": ".0f"}
+    ]
+  },
+  "config": {
+    "axis": {"labelFontSize": 12, "titleFontSize": 14},
+    "view": {"stroke": "transparent"}
+  }
+}
