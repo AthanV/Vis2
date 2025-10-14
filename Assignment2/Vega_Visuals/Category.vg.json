@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": "Tourism Distribution by Category",
   "width": 500,
   "height": 300,
   "params": [
