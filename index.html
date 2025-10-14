@@ -4,11 +4,17 @@
   <meta charset="UTF-8" />
   <title>Tourism in Australia</title>
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
   
   <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/pure-min.css">
   <link rel="stylesheet" href="Styles.css" />
+  <style>
+    .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
 <body>
@@ -20,21 +26,25 @@
 
   <main class="content">
 
-    <!-- MAP SECTION -->
+    <!-- MAP SECTION - Visual Left, Text Right -->
     <section class="pure-g panel">
+      <div class="pure-u-1 section-title">
+        <h2>Tourism Overview by State</h2>
+      </div>
       <div class="pure-u-1 pure-u-md-2-3 visual">
         <div id="vis1"></div>
       </div>
       <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <h2>Tourism Overview by State</h2>
         <p>Explore how domestic and international visitors are distributed across Australia's states and territories. The map shows visitation density and growth trends.</p>
       </div>
     </section>
 
-    <!-- HIGHEST GROWING STATES SECTION -->
-    <section class="pure-g panel reverse">
-      <div class="pure-u-1 pure-u-md-1-2 text-block">
+    <!-- HIGHEST GROWING STATES SECTION - Text Left, Visual Right -->
+    <section class="pure-g panel">
+      <div class="pure-u-1 section-title">
         <h2>Highest Growing States</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 text-block">
         <p>These states show the fastest tourism growth rates in recent years, reflecting investment in local attractions and infrastructure.</p>
       </div>
       <div class="pure-u-1 pure-u-md-1-2 visual">
@@ -42,21 +52,25 @@
       </div>
     </section>
 
-    <!-- MOST VISITED REGIONS -->
+    <!-- MOST VISITED REGIONS - Visual Left, Text Right -->
     <section class="pure-g panel">
+      <div class="pure-u-1 section-title">
+        <h2>Most Visited Regions</h2>
+      </div>
       <div class="pure-u-1 pure-u-md-2-3 visual">
         <div id="vis3"></div>
       </div>
       <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <h2>Most Visited Regions</h2>
-        <p>Coastal and metropolitan regions dominate Australia’s tourism sector, attracting millions of visitors annually for leisure and business travel.</p>
+        <p>Coastal and metropolitan regions dominate Australia's tourism sector, attracting millions of visitors annually for leisure and business travel.</p>
       </div>
     </section>
 
-    <!-- CATEGORIES OF TOURISM -->
-    <section class="pure-g panel reverse">
-      <div class="pure-u-1 pure-u-md-1-2 text-block">
+    <!-- CATEGORIES OF TOURISM - Text Left, Visual Right -->
+    <section class="pure-g panel">
+      <div class="pure-u-1 section-title">
         <h2>Categories of Tourism</h2>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-2 text-block">
         <p>Breakdown of tourism types, including leisure, business, and education sectors, represented by visitor expenditure.</p>
       </div>
       <div class="pure-u-1 pure-u-md-1-2 visual">
@@ -64,13 +78,15 @@
       </div>
     </section>
 
-    <!-- QUARTERLY PERFORMANCE -->
+    <!-- QUARTERLY PERFORMANCE - Visual Left, Text Right -->
     <section class="pure-g panel">
+      <div class="pure-u-1 section-title">
+        <h2>Quarterly Tourism Performance</h2>
+      </div>
       <div class="pure-u-1 pure-u-md-2-3 visual">
         <div id="vis5"></div>
       </div>
       <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <h2>Quarterly Tourism Performance</h2>
         <p>Tourism performance across quarters reveals seasonality and the impacts of events such as border reopenings or festivals.</p>
       </div>
     </section>
@@ -80,8 +96,6 @@
   <footer>
     <p>Data source: Tourism Research Australia | Created by Athan Vass</p>
   </footer>
-
-
 
   <script type="text/javascript">
     var specVis1 = "Assignment2/Vega_Visuals/Map.vg.json";
@@ -105,8 +119,8 @@
     }).catch(console.error);
 
     vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
-  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-}).catch(console.error);
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
   </script>
 </body>
 </html>
