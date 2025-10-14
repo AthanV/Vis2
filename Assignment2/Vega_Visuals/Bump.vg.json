@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "State Tourism Growth Over The Years",
   "width": 500,
-  "height": 400,
+  "height": 300,
   "description": "Bump chart showing ranking of states by population growth over time",
   "data": {
     "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/BumpChart.csv"
