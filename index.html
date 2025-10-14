@@ -1,101 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Tourism in Australia</title>
+  <title>Multiple Visualisations | An Example</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-  
-  <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/pure-min.css">
-  <link rel="stylesheet" href="Styles.css" />
-  <style>
-    .section-title {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  </style>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/Styles.css" media="all">
+
+
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <h1>Tourism in Australia</h1>
-  </header>
+  <div class="page">
 
-  <main class="content">
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>Tourism in Australia</h1>
+      </div>
+    </div>
+    <!-- end pure grid group -->
 
-    <!-- MAP SECTION - Visual Left, Text Right -->
-    <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Tourism Overview by State</h2>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <div id="vis1" class="vis-container"></div>
+        </div>
       </div>
-      <div class="pure-u-1 pure-u-md-2-3 visual">
-        <div id="vis1"></div>
+      <div class="pure-u-1-2">
+        <div class = "description description-right">
+        <p> Upon inspection of the chloropleth map, Northern Territory consistently ranks as the most relatively popular state for tourism, recording values in the high 25
+          - 30 range. Since 2010, tourism in WA has increased.  <p>
       </div>
-      <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <p>Explore how domestic and international visitors are distributed across Australia's states and territories. The map shows visitation density and growth trends.</p>
-      </div>
-    </section>
+    </div>
+    <!-- end pure grid group -->
 
-    <!-- HIGHEST GROWING STATES SECTION - Text Left, Visual Right -->
-    <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Highest Growing States</h2>
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+        <p> Interestingly, the less popular states for tourism face the most volatile swings in growth over the years. Where SA ranked 1 in 2010, it catapulted 
+            to the bottom in 2011. In contrast, the stable, popular states remain with a consistent stream of tourism growth.
+        </p>
+        </div>
       </div>
-      <div class="pure-u-1 pure-u-md-1-2 text-block">
-        <p>These states show the fastest tourism growth rates in recent years, reflecting investment in local attractions and infrastructure.</p>
+      <div class="pure-u-1-2">
+        <div class="description description-right"></div>
+        <div id="vis2" class="vis-container"></div>
       </div>
-      <div class="pure-u-1 pure-u-md-1-2 visual">
-        <div id="vis2"></div>
-      </div>
-    </section>
+    </div>
+    <!-- end pure grid group -->
 
-    <!-- MOST VISITED REGIONS - Visual Left, Text Right -->
-    <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Most Visited Regions</h2>
-      </div>
-      <div class="pure-u-1 pure-u-md-2-3 visual">
-        <div id="vis3"></div>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <p>Coastal and metropolitan regions dominate Australia's tourism sector, attracting millions of visitors annually for leisure and business travel.</p>
-      </div>
-    </section>
+    <!-- pure grid group -->
+   <div class="pure-g">
+  <div class="pure-u-1-2">
+    <div class="description description-left">
+    <div id = "vis3" class="vis-container"></div>
+    </div>
+  </div>
+  <div class="pure-u-1-2">
+    <div class="description description-right"></div>
+    <p> Use this visual to see which regions are most common for toursim. The general trend suggests a majority of tourism in capital cities, particularly with 
+      New South Wales and Victoria
+    </p>
+  
+  </div>
+<!-- end pure grid group -->
 
-    <!-- CATEGORIES OF TOURISM - Text Left, Visual Right -->
-    <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Categories of Tourism</h2>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-2 text-block">
-        <p>Breakdown of tourism types, including leisure, business, and education sectors, represented by visitor expenditure.</p>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-2 visual">
-        <div id="vis4"></div>
-      </div>
-    </section>
 
-    <!-- QUARTERLY PERFORMANCE - Visual Left, Text Right -->
-    <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Quarterly Tourism Performance</h2>
-      </div>
-      <div class="pure-u-1 pure-u-md-2-3 visual">
-        <div id="vis5"></div>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <p>Tourism performance across quarters reveals seasonality and the impacts of events such as border reopenings or festivals.</p>
-      </div>
-    </section>
+   <div class="pure-g">
+ <div class="pure-u-1-2">
+ <div class="description description-left">
+  <p> In Victoria and NSW, most common category of tourism is for business. </p>
+ </div>
+</div>
+<div class="pure-u-1-2">
+ <div class="description description-right"></div>
+ <div id = "vis4" class="vis-container"></div>
+ 
+ 
+</div>
 
-  </main>
 
-  <footer>
-    <p>Data source: Tourism Research Australia | Created by Athan Vass</p>
-  </footer>
+   <div class="pure-g">
+ <div class="pure-u-1-2">
+ <div class="description description-left">
+ <div id = "vis5" class="vis-container"></div>
+ </div>
+</div>
+<div class="pure-u-1-2">
+ <div class="description description-right"></div>
+ <p> In Victoria and NSW, most common category of tourism is for business. 
+ </p>
+</div>
+
+
+ </div>
+    <!-- end pure grid group -->
+
+   <div class="pure-g">
+      <div class="pure-u-1-1 small-font">
+        <p>This visualisation is created by <a href="https://github.com/AthanV/Vis2" target="_blank">Athan
+            Vass</a>. The datasource is <a href="#" target="_blank">some data repository online</a>.</p>
+      </div>
+    </div>
+
+
+  </div> <!-- end page -->
 
   <script type="text/javascript">
     var specVis1 = "Assignment2/Vega_Visuals/Map.vg.json";
@@ -119,8 +146,9 @@
     }).catch(console.error);
 
     vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
   </script>
 </body>
+
 </html>
