@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 5 Most Visited Regions by State",
-  "width": 500,
-  "height": 300,
+  "title": "Top 5 Regions by State",
+  "width": 800,
+  "height": 500,
   "autosize": {"type": "fit", "contains": "padding"},
-  "padding": {"left": 150, "right": 20, "top": 20, "bottom": 20},
-  "config": {
-    "axisY": {"labelPadding": 10}
-  },
+"padding": {"left": 150, "right": 20, "top": 20, "bottom": 20},
+"config": {
+  "axisY": {"labelPadding": 10}
+},
   "description": "Top 5 Most Visited Regions by Selected State",
   "data": {
     "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/TopRegions.csv",
@@ -40,47 +40,36 @@
     }
   ],
   "transform": [
-    {"filter": "datum.State == State_Selection"},
+    {
+      "filter": "datum.State == State_Selection"
+    },
     {
       "window": [{"op": "rank", "as": "rank"}],
       "sort": [{"field": "Trips", "order": "descending"}],
       "groupby": ["State"]
     },
-    {"filter": "datum.rank <= 5"}
-  ],
-  "layer": [
     {
-      "mark": "bar",
-      "encoding": {
-        "y": {
-          "field": "Region",
-          "type": "ordinal",
-          "title": null,
-          "sort": {"field": "Trips", "order": "descending"}
-        },
-        "x": {
-          "field": "Trips",
-          "type": "quantitative",
-          "title": "Number of Trips"
-        },
-        "tooltip": [
-          {"field": "rank", "type": "quantitative", "title": "Rank", "format": ".0f"}
-        ]
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 5
-      },
-      "encoding": {
-        "y": {"field": "Region", "type": "ordinal", "sort": {"field": "Trips", "order": "descending"}},
-        "x": {"field": "Trips", "type": "quantitative"},
-        "text": {"field": "Trips", "type": "quantitative", "format": ".0f"}
-      }
+      "filter": "datum.rank <= 5"
     }
   ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "Region",
+      "type": "ordinal",
+      "title": null,
+      "sort": "-x"
+    },
+    "x": {
+      "field": "Trips",
+      "type": "quantitative",
+      "title": "Number of Trips",
+      "axis": {"tickCount": 10}
+    } ,
+    "tooltip": [
+  {"field": "Trips", "type": "quantitative", "title": "Trips", "format": ".0f"}
+]
+    },
   "height": {"step": 30}
-}
+} 
+
