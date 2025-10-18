@@ -26,7 +26,7 @@
 
   <main class="content">
 
-    <!-- MAP SECTION - Visual Left, Text Right -->
+    <!-- State Box -> Map and Bump Chart -->
 
     <section class="pure-g panel">
       <div class="pure-u-2-3">
@@ -35,66 +35,81 @@
       <div class="pure-u-1-3">
         <div class="text_div" id="text_div1">
         <h1 style="text-align: center;">Tourism Overview by State</h1>
+      
 
         <p>Australia has a history of being a tourism goldmine for travellers worldwide. The lucky country offers an abundance of adventures for all types of tourists. Whether
   you prefer tropical places, surfing hotspots or gastronomically-obsessed cities, Australia has a place to visit. Use this map to explore distribution of tourists amongst 
   its main states. Unfortunately, Tasmania, you have been left out. <p>
-    
+
       </div>
+      </div>
+
+      <div class = "pure-u-1-3">
+        <div class="text_div" id="text_div2">
+          <h1 style="text-align: center;">State Tourism Growth</h1>
+          <p> The following bump chart ranks the mainland Australian states on their rate of tourism growth over the years. Press on a state's colour on the legend,
+            to get a zoomed-in, filtered view of the area's trajectory with its tourism figures. 
+          </p>
+        </div>
+      </div>
+
+      <div class="pure-u-2-3" style="border-left: 1px solid; box-sizing: border-box;">
+                <div id="vis2" class="vis-container" style="width: 100%; padding-left: 5px;"></div>
+            </div>
+      
+      
+
     </section>
 
-    <!-- HIGHEST GROWING STATES SECTION - Text Left, Visual Right -->
+    <!-- Most Visited Regions - Text Left, Visual Right -->
     <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Highest Growing States</h2>
+      <div class="pure-u-1-2" style="border-left: 1px solid; box-sizing: border-box;">
+          <div id="vis3" class="vis-container" style="width: 95%; padding-left: 5px;"></div>
       </div>
-      <div class="pure-u-1 pure-u-md-1-2 text-block">
-        <p>These states show the fastest tourism growth rates in recent years, reflecting investment in local attractions and infrastructure.</p>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-2 visual">
-        <div id="vis2"></div>
-      </div>
-    </section>
+      <div class="pure-u-1-2">
+         <div class="text_div" id="text_div1"></div>
+        <h1 style="text-align: center;">Popular Regions</h1>
+        
+        <p> This visual lists top 5 most popular regions for a particular Australian state. Use the selection pane to filter for a different state, and hover over 
+          the bars to view number of tourists visited.
 
-    <!-- MOST VISITED REGIONS - Visual Left, Text Right -->
-    <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Most Visited Regions</h2>
-      </div>
-      <div class="pure-u-1 pure-u-md-2-3 visual">
-        <div id="vis3"></div>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <p>Coastal and metropolitan regions dominate Australia's tourism sector, attracting millions of visitors annually for leisure and business travel.</p>
+          As the graph shows, a state's main urban hub namely its capital city ranks as the most visited regional area. This trend is skewed by the fact business trips
+          are reflected as tourist trips under Tourism Australia. Indeed, larger cities receive greater business tourism compared to a regional area focused on relaxed 
+          holidaying, such as Far North Queensland.
+        </p>
       </div>
     </section>
 
     <!-- CATEGORIES OF TOURISM - Text Left, Visual Right -->
-    <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Categories of Tourism</h2>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-2 text-block">
-        <p>Breakdown of tourism types, including leisure, business, and education sectors, represented by visitor expenditure.</p>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-2 visual">
-        <div id="vis4"></div>
-      </div>
-    </section>
-
+     <section class="pure-g panel">
+     <div class = "pure-u-1-3">
+   <div class="text_div" id="text_div2">
+     <h1 style="text-align: center;">Reasons for Tourism</h1>
+     <p> The following chart groups the number of tourism trips for each state based on business, holiday, visiting, and other. Holidaying remains the 
+      most common category of tourism for each state.
+     </p>
+   </div>
+ </div>
+ <div class="pure-u-2-3" style="border-left: 1px solid; box-sizing: border-box;">
+           <div id="vis4" class="vis-container" style="width: 100%; padding-left: 5px;"></div>
+       </div>
+  
+  </section>
+ 
     <!-- QUARTERLY PERFORMANCE - Visual Left, Text Right -->
     <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Quarterly Tourism Performance</h2>
-      </div>
-      <div class="pure-u-1 pure-u-md-2-3 visual">
-        <div id="vis5"></div>
-      </div>
-      <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <p>Tourism performance across quarters reveals seasonality and the impacts of events such as border reopenings or festivals.</p>
-      </div>
-    </section>
+      <div class="pure-u-2-3" style="border-left: 1px solid; box-sizing: border-box;">
+    <div id="vis5" class="vis-container" style="width: 95%; padding-left: 5px;"></div>
+    </div>
 
+     <div class="text_div" id="text_div1"></div>
+     <h1 style="text-align: center;"> Tourism across Australian Seasons</h1>
+
+     <p> Unsurprisingly, the summer months remains the most popular season for like-minded tourists. Overall, tourism numbers have increased Australia-wide registering
+      a 30% increase in yearly tourism numbers in 2016 compared to the beginning of the dataset (2010) </p>
+
+    </section>
+    
   </main>
 
   <footer>
