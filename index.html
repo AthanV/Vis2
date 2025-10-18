@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Tourism in Australia</title>
-
-  <!-- Vega Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0" defer></script>
-
-  <!-- PureCSS for Grid -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
   <link rel="stylesheet" href="https://unpkg.com/purecss@3.0.0/build/pure-min.css">
-
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="Assignment2/CSS/Styles.css" />
+  <style>
+    .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
 <body>
+
   <!-- HERO SECTION -->
   <header class="hero">
     <h1>Tourism in Australia</h1>
@@ -24,101 +26,72 @@
 
   <main class="content">
 
-    <!-- TOURISM OVERVIEW (Visual Left, Text Right) -->
+    <!-- MAP SECTION - Visual Left, Text Right -->
+
     <section class="pure-g panel">
-      <div class="pure-u-1 section-title">
-        <h2>Tourism Overview by State</h2>
+      <div class="pure-u-2-3">
+      <div id="vis1" class="vis-container" style="width: 95%; box-sizing: border-box;"></div>>
       </div>
+      <div class="pure-u-1-3">
+        <div class="text_div" id="text_div1">
+        <h1 style="text-align: center;">Tourism Overview by State</h1>
 
-      <div class="pure-u-1 pure-u-md-2-3 visual">
-        <div id="vis1"></div>
-      </div>
-
-      <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <h3>Tourism Overview by State</h3>
-        <p>
-          Australia has a history of being a tourism goldmine for travellers worldwide.
-          The lucky country offers an abundance of adventures for all types of tourists.
-          Whether you prefer tropical beaches, surfing hotspots, or gastronomically-obsessed
-          cities, Australia has something to offer. Use this map to explore the distribution
-          of tourists among its main states. Unfortunately, Tasmania — you’ve been left out this time.
-        </p>
+        <p>Australia has a history of being a tourism goldmine for travellers worldwide. The lucky country offers an abundance of adventures for all types of tourists. Whether
+  you prefer tropical places, surfing hotspots or gastronomically-obsessed cities, Australia has a place to visit. Use this map to explore distribution of tourists amongst 
+  its main states. Unfortunately, Tasmania, you have been left out. <p>
+    
       </div>
     </section>
 
-    <!-- HIGHEST GROWING STATES (Text Left, Visual Right) -->
-    <section class="pure-g panel reverse">
+    <!-- HIGHEST GROWING STATES SECTION - Text Left, Visual Right -->
+    <section class="pure-g panel">
       <div class="pure-u-1 section-title">
         <h2>Highest Growing States</h2>
       </div>
-
       <div class="pure-u-1 pure-u-md-1-2 text-block">
-        <h3>Rapid Growth in Tourism</h3>
-        <p>
-          These states have experienced the fastest tourism growth rates in recent years,
-          driven by strong investment in attractions, infrastructure, and events.
-        </p>
+        <p>These states show the fastest tourism growth rates in recent years, reflecting investment in local attractions and infrastructure.</p>
       </div>
-
       <div class="pure-u-1 pure-u-md-1-2 visual">
         <div id="vis2"></div>
       </div>
     </section>
 
-    <!-- MOST VISITED REGIONS (Visual Left, Text Right) -->
+    <!-- MOST VISITED REGIONS - Visual Left, Text Right -->
     <section class="pure-g panel">
       <div class="pure-u-1 section-title">
         <h2>Most Visited Regions</h2>
       </div>
-
       <div class="pure-u-1 pure-u-md-2-3 visual">
         <div id="vis3"></div>
       </div>
-
       <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <h3>Australia’s Tourism Hotspots</h3>
-        <p>
-          Coastal and metropolitan regions dominate Australia’s tourism industry, attracting
-          millions of visitors annually for both leisure and business purposes.
-        </p>
+        <p>Coastal and metropolitan regions dominate Australia's tourism sector, attracting millions of visitors annually for leisure and business travel.</p>
       </div>
     </section>
 
-    <!-- CATEGORIES OF TOURISM (Text Left, Visual Right) -->
-    <section class="pure-g panel reverse">
+    <!-- CATEGORIES OF TOURISM - Text Left, Visual Right -->
+    <section class="pure-g panel">
       <div class="pure-u-1 section-title">
         <h2>Categories of Tourism</h2>
       </div>
-
       <div class="pure-u-1 pure-u-md-1-2 text-block">
-        <h3>Different Types of Visitors</h3>
-        <p>
-          A breakdown of tourism types — leisure, business, education, and more —
-          represented by visitor expenditure across Australia.
-        </p>
+        <p>Breakdown of tourism types, including leisure, business, and education sectors, represented by visitor expenditure.</p>
       </div>
-
       <div class="pure-u-1 pure-u-md-1-2 visual">
         <div id="vis4"></div>
       </div>
     </section>
 
-    <!-- QUARTERLY PERFORMANCE (Visual Left, Text Right) -->
+    <!-- QUARTERLY PERFORMANCE - Visual Left, Text Right -->
     <section class="pure-g panel">
       <div class="pure-u-1 section-title">
         <h2>Quarterly Tourism Performance</h2>
       </div>
-
       <div class="pure-u-1 pure-u-md-2-3 visual">
         <div id="vis5"></div>
       </div>
-
       <div class="pure-u-1 pure-u-md-1-3 text-block">
-        <h3>Seasonal Tourism Patterns</h3>
-        <p>
-          Tourism performance across quarters reveals clear seasonality and reflects
-          the impact of events such as festivals and international border reopenings.
-        </p>
+        <p>Tourism performance across quarters reveals seasonality and the impacts of events such as border reopenings or festivals.</p>
       </div>
     </section>
 
@@ -128,20 +101,30 @@
     <p>Data source: Tourism Research Australia | Created by Athan Vass</p>
   </footer>
 
-  <!-- Vega Embedding -->
   <script type="text/javascript">
-    const specs = [
-      ["#vis1", "Assignment2/Vega_Visuals/Map.vg.json"],
-      ["#vis2", "Assignment2/Vega_Visuals/Bump.vg.json"],
-      ["#vis3", "Assignment2/Vega_Visuals/TopRegions.vg.json"],
-      ["#vis4", "Assignment2/Vega_Visuals/Category.vg.json"],
-      ["#vis5", "Assignment2/Vega_Visuals/Heatmap.vg.json"]
-    ];
+    var specVis1 = "Assignment2/Vega_Visuals/Map.vg.json";
+    var specVis2 = "Assignment2/Vega_Visuals/Bump.vg.json";
+    var specVis3 = "Assignment2/Vega_Visuals/TopRegions.vg.json";
+    var specVis4 = "Assignment2/Vega_Visuals/Category.vg.json";
+    var specVis5 = "Assignment2/Vega_Visuals/Heatmap.vg.json";
 
-    specs.forEach(([id, spec]) => {
-      vegaEmbed(id, spec, { actions: false })
-        .catch(() => document.querySelector(id).innerHTML = "<p>Visualization could not load.</p>");
-    });
+    vegaEmbed('#vis1', specVis1, { "actions": false });
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
   </script>
 </body>
 </html>
