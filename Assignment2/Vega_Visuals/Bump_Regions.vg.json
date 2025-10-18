@@ -47,7 +47,12 @@
         "color": {
           "field": "State",
           "type": "nominal",
-          "title": "State"
+          "title": "State",
+          "legend" : {
+            "orient": "right",
+            "padding": 10,
+            "offset": 10
+          }
         },
         "opacity": {
           "condition": {"param": "state_highlight", "value": 1},
@@ -69,7 +74,7 @@
     },
     {
       "title": "Top 5 Regions by State",
-      "width": 800,
+      "width": 500,
       "height": 500,
       "data": {
         "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/TopRegions.csv",
