@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 500,
+  "width": "container",
   "height": 300,
   "projection": {"type": "mercator"},
   "params": [
@@ -35,7 +35,8 @@
       "as": "geo"
     }
   ],
-  "mark": {"type": "geoshape"},
+  "mark": {"type": "geoshape", "stroke": "black",
+  "strokeWidth": 0.5},
   "encoding": {
     "shape": {"field": "geo", "type": "geojson"},
     "color": {
@@ -45,13 +46,19 @@
         "type": "log",
         "domain": [5, 10, 20, 30],
         "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
-      }
+      },
+    
+    "legend": {
+    "orient": "bottom",
+    "direction": "horizontal",
+    "titleAnchor":"middle"
+
+    }
     },
     "tooltip": [
       {"field": "State", "type": "nominal", "title": "State"},
       {"field": "Visitors per 1000 Residents", "type": "quantitative"},
-      {"field": "Trips", "type": "quantitative", "format": ".0f"},
-      {"field": "Population", "type": "quantitative"}
+      {"field": "Actual Trips", "type": "quantitative", "format": ".0f"}
       
     ]
   }
