@@ -89,8 +89,8 @@ a {
   font-weight: bold;
 }
 
-#black_font {
-  color: black
+#black_font a {
+  color: black;
 }
 
 .text-div {
