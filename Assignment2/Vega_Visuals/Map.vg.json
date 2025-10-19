@@ -36,10 +36,10 @@
       "as": "geo"
     }
   ],
-  "mark": {"type": "geoshape", "stroke": "white",
+  "mark": {"type": "geoshape", "stroke": "black",
   "strokeWidth": 0.5},
   "encoding": {
-    "shape": {"field": "geo", "type": "geojson", "fill": "lightgray", "stroke": "white"},
+    "shape": {"field": "geo", "type": "geojson"},
     "color": {
       "field": "Visitors per 1000 Residents",
       "type": "quantitative",
