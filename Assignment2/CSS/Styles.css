@@ -82,6 +82,10 @@ a {
   font-weight: bold;
 }
 
+#black_font {
+  color: black
+}
+
 .text-div {
   font-family: 'Poppins', sans-serif;
 
