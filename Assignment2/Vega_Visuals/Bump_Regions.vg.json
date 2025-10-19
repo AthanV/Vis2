@@ -1,6 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "padding": 20,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "config": {
+    "autosize": {"type": "fit", "contains": "padding"},
+    "legend": {
+      "orient": "top",
+      "columns": 3,
+      "labelLimit": 100,
+      "titleLimit": 100
+    }
+  },
   "vconcat": [
     {
       "params": [
@@ -47,12 +57,7 @@
         "color": {
           "field": "State",
           "type": "nominal",
-          "title": "State",
-          "legend" : {
-            "orient": "right",
-            "padding": 10,
-            "offset": 10
-          }
+          "title": "State"
         },
         "opacity": {
           "condition": {"param": "state_highlight", "value": 1},
@@ -74,17 +79,13 @@
         "format": {"type": "csv", "parse": {"Trips": "number"}}
       },
       "transform": [
-        {
-          "filter": {"param": "state_highlight"}
-        },
+        {"filter": {"param": "state_highlight"}},
         {
           "window": [{"op": "rank", "as": "rank"}],
           "sort": [{"field": "Trips", "order": "descending"}],
           "groupby": ["State"]
         },
-        {
-          "filter": "datum.rank <= 5"
-        }
+        {"filter": "datum.rank <= 5"}
       ],
       "mark": "bar",
       "encoding": {
