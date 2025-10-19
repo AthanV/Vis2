@@ -6,6 +6,13 @@ body {
   color: #222;
 }
 
+.pure-u-2-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 h1, h2, h3 {
   margin: 0 0 1rem;
 }
