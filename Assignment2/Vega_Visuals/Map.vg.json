@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Tourism Trips per 1000 People in Australia",
   "width": "container",
   "height": 300,
   "projection": {"type": "mercator"},
@@ -38,7 +39,7 @@
   "mark": {"type": "geoshape", "stroke": "black",
   "strokeWidth": 0.5},
   "encoding": {
-    "shape": {"field": "geo", "type": "geojson"},
+    "shape": {"field": "geo", "type": "geojson", "fill": "lightgray", "stroke": "white"},
     "color": {
       "field": "Visitors per 1000 Residents",
       "type": "quantitative",
