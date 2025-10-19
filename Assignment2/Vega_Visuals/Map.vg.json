@@ -1,5 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  },
   "title": "Tourism Trips per 1000 People in Australia",
   "width": "container",
   "height": 300,
