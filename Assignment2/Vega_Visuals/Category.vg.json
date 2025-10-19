@@ -2,7 +2,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "autosize": {"type": "fit", "contains": "padding"},
-  "padding": {"left": 120, "right": 10, "top": 10, "bottom": 10}
   "title": "Tourism Distribution by Category",
   "width": 500,
   "height": 300,
