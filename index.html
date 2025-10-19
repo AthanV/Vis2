@@ -30,7 +30,7 @@
 
     <section class="pure-g panel">
       <div class="pure-u-2-3">
-      <div id="vis1" class="vis-container" style="width: 95%; box-sizing: border-box;"></div>>
+      <div id="vis1" class="vis-container" style="width: 95%; box-sizing: border-box;"></div>
       </div>
       <div class="pure-u-1-3" style="box-sizing: border-box;">
         <div class="text_div" id="text_div1">
@@ -74,13 +74,17 @@
      <div class = "pure-u-1-3">
    <div class="text_div" id="text_div2">
      <h1 style="text-align: center;">Reasons for Tourism</h1>
-     <p> The following chart groups the number of tourism trips for each state based on business, holiday, visiting, and other. Holidaying remains the 
+     <p> The following chart groups the number of tourism trips for each state based on <span class="business_text"> business </span>, <span class="holiday_text"> holiday </span>
+      , <span class = "visiting_text"> visiting </span> and <span class="other_text"> other </span>. Holidaying remains the 
       most common category of tourism for each state.
+     </p>
+
+     <p style = "font-size: 12px;">  <b>* Colours chosen from <a href="https://davidmathlogic.com/colorblind/#%23E66100-%235D3A9B" target="_blank"> Coloring for Colorblindness </a>. </b>
      </p>
    </div>
  </div>
  <div class="pure-u-2-3" style=" box-sizing: border-box;">
-           <div id="vis4" class="vis-container" style="width: 100%; padding-left: 5px;"></div>
+           <div id="vis4" class="vis-container" style="width: 100%;"></div>
        </div>
   
   </section>
@@ -95,8 +99,13 @@
      <div class="text_div" id="text_div1"></div>
      <h1 style="text-align: center;"> Tourism across Australian Seasons</h1>
 
-     <p> Unsurprisingly, the summer months remains the most popular season for like-minded tourists. Overall, tourism numbers have increased Australia-wide registering
-      a 30% increase in yearly tourism numbers in 2016 compared to the beginning of the dataset (2010) </p>
+     <p> Being the driest and hottest continent in the world means that Australia's tourism industry is dominated by the warmer months. This is fostered
+      with the abundance of beachtown getaways that stretch across Australia's abundant coastline, particularly with the East coast. 
+     </p>
+
+     <p> Hover over the heat rectangles to view greater details regarding tourism amongst these quarters. Since 2010, Australia has gained a 30% increase in 
+      yearly tourism figures suggesting that Australian tourism is transforming to be a pivotal industry for the country. 
+     </p>
 
       </div>
 
@@ -105,8 +114,18 @@
   </main>
 
   <footer>
-    <p>Data source: Tourism Research Australia | Created by Athan Vass</p>
+    <p>Data sources are<a href="https://www.kaggle.com/datasets/luisblanche/quarterly-tourism-in-australia?resource=download" target="_blank">Quarterly Tourism Statistics</a>
+      ,<a href="https://www.abs.gov.au/statistics/people/population/national-state-and-territory-
+population/latest-release" target="_blank">population data</a> and<a href="https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.001July%202016?Open
+Document" target="_blank"> spatial data</a>. Created by <a href="https://github.com/AthanV" target="_blank">Athan Vass</a>
+</p>
   </footer>
+
+
+  p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">FIT3179
+            Teaching Team</a>. The datasource is <a href="#" target=" _blank">some data repository online</href>.</p>
+      </div>
+    </div>
 
   <script type="text/javascript">
     var specVis1 = "Assignment2/Vega_Visuals/Map.vg.json";
