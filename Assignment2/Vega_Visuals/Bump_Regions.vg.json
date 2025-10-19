@@ -13,7 +13,7 @@
         }
       ],
       "title": "State Tourism Growth Over The Years",
-      "width": 400,
+      "width": 450,
       "height": 300,
       "description": "Bump chart showing ranking of states by population growth over time",
       "data": {
@@ -70,7 +70,7 @@
     },
     {
       "title": "Top 5 Regions by State",
-      "width": 400,
+      "width": 450,
       "data": {
         "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/TopRegions.csv",
         "format": {"type": "csv", "parse": {"Trips": "number"}}
