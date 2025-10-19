@@ -14,6 +14,10 @@ p {
   line-height: 1.6;
 }
 
+a {
+  color: white; /* Sets the default color for all hyperlinks */
+}
+
 /* ==== HERO ==== */
 .hero {
   background: #003366;
@@ -43,10 +47,6 @@ p {
   padding: 2rem;
 }
 
-.panel.reverse {
-  flex-direction: row-reverse;
-}
-
 /* Section Title */
 .section-title {
   width: 100%;
@@ -54,60 +54,39 @@ p {
   margin-bottom: 1rem;
 }
 
-/* ==== VISUAL ==== */
-.visual {
-  flex: 0 0 66.66%;
-  padding: 1rem;
+#description_left {
+  padding-left: 10px;
 }
 
-.visual > div {
-  width: 100%;
-  height: 400px;
-  background: #f9fcff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-}
-
-/* ==== TEXT BLOCK ==== */
-.text-block {
-  flex: 0 0 33.33%;
-  padding: 1.5rem 2rem;
-}
-
-.text-block h3 {
-  color: #003366;
-  font-weight: 600;
-  border-bottom: 2px solid #0077B6;
-  padding-bottom: 0.4rem;
-  margin-bottom: 1rem;
+#description_right {
+  padding-right: 10px;
 }
 
 .business_text {
-  color: #E1BE6A
+  color: #E1BE6A;
+  font-weight: bold;
 }
 
 .holiday_text {
- color: #40B0A6
+ color: #40B0A6;
+ font-weight: bold;
 }
 
 .other_text {
-  color: #E66100
+  color: #E66100;
+  font-weight: bold;
 }
 
 .visiting_text {
-  color: #5D3A9B
+  color: #5D3A9B;
+  font-weight: bold;
 }
 
-/* ==== RESPONSIVE ==== */
-@media (max-width: 768px) {
-  .visual, .text-block {
-    flex: 0 0 100%;
-  }
+.text-div {
+  font-family: 'Poppins', sans-serif;
 
-  .visual > div {
-    height: 300px;
-  }
 }
+
 
 /* ==== FOOTER ==== */
 footer {
