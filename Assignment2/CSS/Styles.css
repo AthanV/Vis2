@@ -1,31 +1,88 @@
-  body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: #f8f9fa;
-      color: #222;
-    }
+/* ==== GLOBAL ==== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  color: #222;
+}
 
-    .hero {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-    }
+h1, h2, h3 {
+  margin: 0 0 1rem;
+}
 
-    main {
-      padding: 30px 5%;
-    }
+p {
+  line-height: 1.6;
+}
 
-    .panel {
-      margin-bottom: 60px;
-      align-items: center;
-    }
+/* ==== HERO ==== */
+.hero {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
 
-    .text_div {
-      padding: 20px 30px;
-    }
+.hero h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
 
-    .vis-container {
+/* ==== PANELS ==== */
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 2rem;
+}
+
+.panel.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Section Title */
+.section-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ==== VISUAL ==== */
+.visual {
+  flex: 0 0 66.66%;
+  padding: 1rem;
+}
+
+.visual > div {
+  width: 100%;
+  height: 400px;
+  background: #f9fcff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+/* ==== TEXT BLOCK ==== */
+.text-block {
+  flex: 0 0 33.33%;
+  padding: 1.5rem 2rem;
+}
+
+.text-block h3 {
+  color: #003366;
+  font-weight: 600;
+  border-bottom: 2px solid #0077B6;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.vis-container {
       background: white;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -39,23 +96,9 @@
       align-items: center;
     }
 
-    /* Make visuals responsive and balanced */
-    #vis1, #vis2, #vis4, #vis5 {
-      width: 95%;
-      max-width: 900px;
-    }
-
-    footer {
-      text-align: center;
-      background: #003366;
-      color: white;
-      padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: 40px;
-    }
-
-    /* Responsive stacking on small screens */
-    @media (max-width: 900px) {
+    
+/* ==== RESPONSIVE ==== */
+@media (max-width: 900px) {
       .pure-g {
         display: block;
       }
@@ -69,3 +112,19 @@
         margin: 0 auto;
       }
     }
+
+#vis1, #vis2, #vis4, #vis5 {
+      width: 95%;
+      max-width: 900px;
+    }
+
+
+/* ==== FOOTER ==== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #003366;
+  color: white;
+  border-radius: 1rem 1rem 0 0;
+  font-size: 0.9rem;
+}
