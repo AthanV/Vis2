@@ -29,7 +29,7 @@
   "encoding": {
     "x": {"aggregate": "sum", "field": "Trips", "title": "Trips"},
     "y": {"field": "State", "title": null},
-    "color": {"field": "Reason", "legend": null, "scale": {"range": [#FFC20A, #0C7BDC, #994F00, #E66100]},
+    "color": {"field": "Reason", "legend": null, "scale": {"range": ["#FFC20A", "#0C7BDC", "#994F00", "#E66100"]}},
     "tooltip": [
   {"field": "Reason", "type": "nominal", "title": "Reason"},
   {"field": "Trips", "type": "quantitative"}
