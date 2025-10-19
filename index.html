@@ -19,89 +19,82 @@
 
 <body>
 
-  <!-- HERO SECTION -->
+<!-- HERO SECTION -->
   <header class="hero">
     <h1>Tourism in Australia</h1>
   </header>
 
-  <main class="content">
+  <main>
 
-    <!-- State Box -> Map -->
-
+    <!-- MAP SECTION -->
     <section class="pure-g panel">
       <div class="pure-u-2-3">
-      <div id="vis1" class="vis-container" style="width: 95%; box-sizing: border-box;"></div>>
+        <div id="vis1" class="vis-container"></div>
       </div>
-      <div class="pure-u-1-3" style="box-sizing: border-box;">
+
+      <div class="pure-u-1-3">
         <div class="text_div" id="text_div1">
-        <h1 style="text-align: center;">Tourism around Australia</h1>
-      
-
-        <p>Australia has a history of being a tourism goldmine for travellers worldwide. The lucky country offers an abundance of adventures for all types of tourists. Whether
-  you prefer tropical places, surfing hotspots or gastronomically-obsessed cities, Australia has a place to visit. Use this map to explore distribution of tourists amongst 
-  its main states. Unfortunately, Tasmania, you have been left out. <p>
-
-    <p> Use the drop down menu to filter by a specific year and hover over the states to view more tourism details</p>
-
-      </div>
+          <h1 style="text-align: center;">Tourism around Australia</h1>
+          <p>Australia has long been a tourism goldmine for travellers worldwide. Whether
+          you prefer tropical beaches, surfing hotspots, or gastronomically-obsessed cities,
+          Australia has a destination for you.</p>
+          <p>Use this map to explore the distribution of tourists across its main states.
+          (Sorry, Tasmania — maybe next time!)</p>
+          <p>Use the dropdown to filter by year and hover over states for details.</p>
+        </div>
       </div>
     </section>
 
-<section class="pure-g panel">
-    <div class = "pure-u-1-3" style="box-sizing: border-box;">
-  <div class="text_div" id="text_div2">
-    <h1 style="text-align: center;">State and Regional Tourism</h1>
-    <p> 
-      Since 2010, Australian tourist numbers have consistently increased with states like WA gaining consistent tourist interest as reflected with its 
-      high growth rates. Use the bump chart to see the rate of tourism growth for the mainland Australian states. </p>
-      
-      <p>
-      Filtering on the chart's legend will retrieve top 5 most visited regions for the selected state. If you notice, main urban hubs of Australian states, that is their 
-      capital cities rank consistently as most visited regions. 
-    </p>
-    
-  </div>
-</div>
-<div class="pure-u-2-3" style="box-sizing: border-box;">
-          <div id="vis2" class="vis-container" style="width: 100%;"></div>
+    <!-- BUMP CHART SECTION -->
+    <section class="pure-g panel">
+      <div class="pure-u-1-3">
+        <div class="text_div" id="text_div2">
+          <h1 style="text-align: center;">State and Regional Tourism</h1>
+          <p>Since 2010, Australian tourist numbers have consistently increased, with states
+          like Western Australia showing steady growth. Use the bump chart to explore
+          tourism growth rates across mainland states.</p>
+          <p>Filtering the legend retrieves the top 5 most visited regions for the selected state.
+          Major urban hubs — the capital cities — consistently rank highest.</p>
+        </div>
       </div>
-</section>
-      
 
+      <div class="pure-u-2-3">
+        <div id="vis2" class="vis-container"></div>
+      </div>
+    </section>
 
-    <!-- CATEGORIES OF TOURISM - Text Left, Visual Right -->
-     <section class="pure-g panel">
-     <div class = "pure-u-1-3">
-   <div class="text_div" id="text_div2">
-     <h1 style="text-align: center;">Reasons for Tourism</h1>
-     <p> The following chart groups the number of tourism trips for each state based on business, holiday, visiting, and other. Holidaying remains the 
-      most common category of tourism for each state.
-     </p>
-   </div>
- </div>
- <div class="pure-u-2-3" style=" box-sizing: border-box;">
-           <div id="vis4" class="vis-container" style="width: 100%; padding-left: 5px;"></div>
-       </div>
-  
-  </section>
- 
-    <!-- QUARTERLY PERFORMANCE - Visual Left, Text Right -->
+    <!-- CATEGORY OF TOURISM SECTION -->
+    <section class="pure-g panel">
+      <div class="pure-u-1-3">
+        <div class="text_div" id="text_div3">
+          <h1 style="text-align: center;">Reasons for Tourism</h1>
+          <p>The following chart groups the number of tourism trips for each state based on
+          business, holiday, visiting, and other. Holidaying remains the most common
+          category of tourism for each state.</p>
+        </div>
+      </div>
+
+      <div class="pure-u-2-3">
+        <div id="vis4" class="vis-container" style="margin-left: 40px;"></div>
+      </div>
+    </section>
+
+    <!-- SEASONS SECTION -->
     <section class="pure-g panel">
       <div class="pure-u-2-3">
-    <div id="vis5" class="vis-container" style="width: 95%; padding-left: 5px;"></div>
-    </div>
-     
-    <div class="pure-u-1-3" style="box-sizing: border-box;">
-     <div class="text_div" id="text_div1"></div>
-     <h1 style="text-align: center;"> Tourism across Australian Seasons</h1>
-
-     <p> Unsurprisingly, the summer months remains the most popular season for like-minded tourists. Overall, tourism numbers have increased Australia-wide registering
-      a 30% increase in yearly tourism numbers in 2016 compared to the beginning of the dataset (2010) </p>
-
+        <div id="vis5" class="vis-container"></div>
       </div>
 
+      <div class="pure-u-1-3">
+        <div class="text_div" id="text_div4">
+          <h1 style="text-align: center;">Tourism across Australian Seasons</h1>
+          <p>Unsurprisingly, the summer months remain the most popular season for tourists.
+          Overall, tourism numbers have increased nationwide — a 30% rise in 2016 compared
+          to the start of the dataset (2010).</p>
+        </div>
+      </div>
     </section>
-    
+
   </main>
 
   <footer>
