@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "padding": 20px,
+  "padding": 20,
   "title": "Quarterly Tourism Performance",
   "data": {"url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/Heatmap.csv"},
   "width": "container",
