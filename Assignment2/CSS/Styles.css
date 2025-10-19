@@ -83,7 +83,7 @@ p {
 }
 
 /* ==== RESPONSIVE ==== */
-media (max-width: 768px) {
+@media (max-width: 768px) {
   .visual, .text-block {
     flex: 0 0 100%;
   }
