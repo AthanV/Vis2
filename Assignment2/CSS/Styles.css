@@ -82,6 +82,22 @@ p {
   margin-bottom: 1rem;
 }
 
+.business_text {
+  color: #E1BE6A
+}
+
+.holiday_text {
+ color: #40B0A6
+}
+
+.other_text {
+  color: #E66100
+}
+
+.visiting_text {
+  color: #5D3A9B
+}
+
 /* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
   .visual, .text-block {
