@@ -36,7 +36,7 @@
       "as": "geo"
     }
   ],
-  "mark": {"type": "geoshape", "stroke": "black",
+  "mark": {"type": "geoshape", "stroke": "white",
   "strokeWidth": 0.5},
   "encoding": {
     "shape": {"field": "geo", "type": "geojson", "fill": "lightgray", "stroke": "white"},
