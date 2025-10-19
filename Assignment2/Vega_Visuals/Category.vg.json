@@ -30,6 +30,7 @@
     "x": {"aggregate": "sum", "field": "Trips", "title": "Trips"},
     "y": {"field": "State", "title": null},
     "color": {"field": "Reason"},
+    "legend": null,
     "tooltip": [
   {"field": "Reason", "type": "nominal", "title": "Reason"},
   {"field": "Trips", "type": "quantitative"}
