@@ -33,31 +33,31 @@
       <div id="vis1" class="vis-container" style="width: 95%; box-sizing: border-box;"></div>
       </div>
       <div class="pure-u-1-3" style="box-sizing: border-box;">
-        <div class="text_div" id="text_div1">
+        <div class="text_div" id="description_right">
         <h1 style="text-align: center;">Tourism around Australia</h1>
       
 
         <p>Australia has a history of being a tourism goldmine for travellers worldwide. The lucky country offers an abundance of adventures for all types of tourists. Whether
   you prefer tropical places, surfing hotspots or gastronomically-obsessed cities, Australia has a place to visit. Use this map to explore distribution of tourists amongst 
-  its main states. Unfortunately, Tasmania, you have been left out. <p>
+  its main states (Sorry Tasmania, you have been left out.) <p>
 
-    <p> Use the drop down menu to filter by a specific year and hover over the states to view more tourism details</p>
+    <p> Use the <b>drop down menu</b> to filter by a specific year and <b>hover</b> over the states to view more tourism details</p>
 
       </div>
       </div>
     </section>
 
+<!-- State and Regional Tourism -> Text Left Visual Right -->
 <section class="pure-g panel">
     <div class = "pure-u-1-3" style="box-sizing: border-box;">
-  <div class="text_div" id="text_div2">
+  <div class="text_div" id="description_left">
     <h1 style="text-align: center;">State and Regional Tourism</h1>
     <p> 
       Since 2010, Australian tourist numbers have consistently increased with states like WA gaining consistent tourist interest as reflected with its 
       high growth rates. Use the bump chart to see the rate of tourism growth for the mainland Australian states. </p>
       
       <p>
-      Filtering on the chart's legend will retrieve top 5 most visited regions for the selected state. If you notice, main urban hubs of Australian states, that is their 
-      capital cities rank consistently as most visited regions. 
+      Filtering on the chart's <b> legend </b> will retrieve top 5 most visited regions for the selected state. A common tread is that the states' capital cities consistently rank as the most visited regions. 
     </p>
     
   </div>
@@ -69,13 +69,19 @@
       
 
 
-    <!-- CATEGORIES OF TOURISM - Text Left, Visual Right -->
+    <!-- CATEGORIES OF TOURISM - Visual Left, Text Right -->
      <section class="pure-g panel">
+ <div class="pure-u-2-3" style=" box-sizing: border-box;">
+           <div id="vis4" class="vis-container" style="width: 100%;"> </div>
+  </div>
+
      <div class = "pure-u-1-3">
-   <div class="text_div" id="text_div2">
+   <div class="text_div" id="description_right">
      <h1 style="text-align: center;">Reasons for Tourism</h1>
      <p> The following chart groups the number of tourism trips for each state based on <span class="business_text"> business </span>, <span class="holiday_text"> holiday </span>
-      , <span class = "visiting_text"> visiting </span> and <span class="other_text"> other </span>. Holidaying remains the 
+      , <span class = "visiting_text"> visiting </span> and <span class="other_text"> other </span>. </p>
+      
+      <p> Holidaying remains the 
       most common category of tourism for each state.
      </p>
 
@@ -83,32 +89,28 @@
      </p>
    </div>
  </div>
- <div class="pure-u-2-3" style=" box-sizing: border-box;">
-           <div id="vis4" class="vis-container" style="width: 100%;"></div>
-       </div>
-  
   </section>
  
-    <!-- QUARTERLY PERFORMANCE - Visual Left, Text Right -->
+    <!-- QUARTERLY PERFORMANCE - Visual right, Text left -->
     <section class="pure-g panel">
-      <div class="pure-u-2-3">
-    <div id="vis5" class="vis-container" style="width: 95%; padding-left: 5px;"></div>
-    </div>
-     
     <div class="pure-u-1-3" style="box-sizing: border-box;">
-     <div class="text_div" id="text_div1"></div>
+     <div class="text_div" id="description_left"></div>
      <h1 style="text-align: center;"> Tourism across Australian Seasons</h1>
 
      <p> Being the driest and hottest continent in the world means that Australia's tourism industry is dominated by the warmer months. This is fostered
       with the abundance of beachtown getaways that stretch across Australia's abundant coastline, particularly with the East coast. 
      </p>
 
-     <p> Hover over the heat rectangles to view greater details regarding tourism amongst these quarters. Since 2010, Australia has gained a 30% increase in 
-      yearly tourism figures suggesting that Australian tourism is transforming to be a pivotal industry for the country. 
+     <p> <b> Hover </b>over the heat rectangles to view greater details regarding tourism amongst these quarters. Since 2010, Australia has gained a 30% increase in 
+      yearly tourism figures suggesting that tourism is transforming to be a pivotal industry for the country. 
      </p>
 
       </div>
 
+    
+    <div class="pure-u-2-3">
+  <div id="vis5" class="vis-container" style="width: 95%; padding-left: 5px;"></div>
+  </div>
     </section>
     
   </main>
@@ -122,10 +124,6 @@ Document" target="_blank"> spatial data</a>. Created by <a href="https://github.
   </footer>
 
 
-  p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">FIT3179
-            Teaching Team</a>. The datasource is <a href="#" target=" _blank">some data repository online</href>.</p>
-      </div>
-    </div>
 
   <script type="text/javascript">
     var specVis1 = "Assignment2/Vega_Visuals/Map.vg.json";
