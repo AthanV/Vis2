@@ -85,7 +85,7 @@
         },
         {"filter": "datum.rank <= 5"}
       ],
-      "mark": {"type": "bar", "cornerRadius": 3},
+      "mark": {"type": "bar"},
       "encoding": {
         "y": {
           "field": "Region",
