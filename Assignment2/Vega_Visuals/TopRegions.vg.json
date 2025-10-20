@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top 5 Regions by State",
   "width": 800,
-  "height": 500,
+  "height": 550,
   "autosize": {"type": "fit", "contains": "padding"},
 "padding": {"left": 150, "right": 20, "top": 20, "bottom": 20},
 "config": {
