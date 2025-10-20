@@ -34,7 +34,7 @@
     "color": {"field": "Reason", "legend": null, "scale": {"range": ["#E1BE6A", "#40B0A6", "#E66100", "#5D3A9B"]}},
     "tooltip": [
   {"field": "Reason", "type": "nominal", "title": "Reason"},
-  {"field": "Trips", "type": "quantitative", "format": ".0f"}
+  {"field": "Trips", "type": "quantitative", "format": ",.0f"}
    ]
   } 
 },
