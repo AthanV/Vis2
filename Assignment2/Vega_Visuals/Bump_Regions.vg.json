@@ -1,7 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "view": {"stroke": "transparent"},
+    "legend": {"labelFontSize": 11, "titleFontSize": 12},
+    "axis": {"labelFontSize": 11, "titleFontSize": 12}
+  },
   "vconcat": [
     {
+      "title": "State Tourism Growth Over The Years",
+      "width": 400,
+      "height": 250,
       "params": [
         {
           "name": "state_highlight",
@@ -10,10 +18,6 @@
           "value": [{"State": "Victoria"}]
         }
       ],
-      "title": "State Tourism Growth Over The Years",
-      "width": "400",
-      "height": 300,
-      "description": "Bump chart showing ranking of states by population growth over time",
       "data": {
         "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/BumpChart.csv",
         "format": {"type": "csv", "parse": {"Growth": "number", "Year": "number"}}
@@ -25,22 +29,17 @@
           "groupby": ["Year"]
         }
       ],
-      "mark": {
-        "type": "line",
-        "point": true
-      },
+      "mark": {"type": "line", "point": true},
       "encoding": {
         "x": {
           "field": "Year",
           "type": "ordinal",
-          "title": null,
-          "axis": {"labelAngle": 0}
+          "axis": {"labelAngle": 0, "title": "Year"}
         },
         "y": {
           "field": "rank",
           "type": "quantitative",
-          "title": null,
-          "axis": {"labelAngle": 0},
+          "axis": {"title": "Rank"},
           "sort": "ascending",
           "scale": {"reverse": true, "domain": [1, 7]}
         },
@@ -48,15 +47,16 @@
           "field": "State",
           "type": "nominal",
           "title": "State",
-          "legend" : {
+          "legend": {
             "orient": "right",
-            "padding": 10,
-            "offset": 10
+            "padding": 5,
+            "offset": 5,
+            "labelLimit": 100
           }
         },
         "opacity": {
           "condition": {"param": "state_highlight", "value": 1},
-          "value": 0.2
+          "value": 0.15
         },
         "tooltip": [
           {"field": "State", "type": "nominal"},
@@ -68,46 +68,53 @@
     },
     {
       "title": "Top 5 Regions by State",
-      "width": "450",
+      "width": 400,
+      "height": {"step": 28},
+  
       "data": {
         "url": "https://raw.githubusercontent.com/AthanV/Vis2/refs/heads/main/Assignment2/DataSets/TopRegions.csv",
         "format": {"type": "csv", "parse": {"Trips": "number"}}
       },
       "transform": [
-        {
-          "filter": {"param": "state_highlight"}
-        },
+        {"filter": {"param": "state_highlight"}},
         {
           "window": [{"op": "rank", "as": "rank"}],
           "sort": [{"field": "Trips", "order": "descending"}],
           "groupby": ["State"]
         },
-        {
-          "filter": "datum.rank <= 5"
-        }
+        {"filter": "datum.rank <= 5"}
       ],
-      "mark": "bar",
+      "mark": {"type": "bar", "cornerRadius": 3},
       "encoding": {
         "y": {
           "field": "Region",
           "type": "ordinal",
           "title": null,
           "sort": "-x",
-          "axis": {"labelLimit": 500}
+          "axis": {
+            "labelLimit": 500,
+            "labelAlign": "right"
+          }
         },
         "x": {
           "field": "Trips",
           "type": "quantitative",
           "title": "Number of Trips",
-          "axis": {"tickCount": 10}
+          "axis": {"tickCount": 6}
+        },
+        "color": {
+          "field": "State",
+          "type": "nominal",
+          "legend": null
         },
         "tooltip": [
           {"field": "State", "type": "nominal"},
           {"field": "Region", "type": "nominal"},
-          {"field": "Trips", "type": "quantitative", "title": "Trips", "format": ".0f"}
+          {"field": "Trips", "type": "quantitative", "format": ",.0f"}
         ]
-      },
-      "height": {"step": 30}
+      }
     }
-  ]
+  ],
+   "autosize": {"type": "fit", "contains": "padding"},
+   "padding": {"left": 70, "top": 20, "bottom": 20}
 }
