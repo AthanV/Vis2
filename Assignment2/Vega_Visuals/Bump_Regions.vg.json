@@ -11,7 +11,7 @@
         }
       ],
       "title": "State Tourism Growth Over The Years",
-      "width": "500",
+      "width": "400",
       "height": 300,
       "description": "Bump chart showing ranking of states by population growth over time",
       "data": {
