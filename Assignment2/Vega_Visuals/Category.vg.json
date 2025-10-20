@@ -30,13 +30,11 @@
   "encoding": {
     "x": {"aggregate": "sum", "field": "Trips", "title": "Trips", "scale": {"domain": [0, 32000]},
   "axis": {"values": [0, 4000, 8000, 12000, 16000, 20000, 24000, 28000, 32000]}},
-    "y": {"field": "State", "title": null, "scale": {
-    "domain": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"]
-  }},
+    "y": {"field": "State", "title": null},
     "color": {"field": "Reason", "legend": null, "scale": {"range": ["#E1BE6A", "#40B0A6", "#E66100", "#5D3A9B"]}},
     "tooltip": [
   {"field": "Reason", "type": "nominal", "title": "Reason"},
-  {"field": "Trips", "type": "quantitative"}
+  {"field": "Trips", "type": "quantitative", "format": ".0f"}
    ]
   } 
 },
