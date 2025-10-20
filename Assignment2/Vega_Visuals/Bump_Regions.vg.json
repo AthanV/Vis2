@@ -47,6 +47,7 @@
           "field": "State",
           "type": "nominal",
           "title": "State",
+          "scale": {"range": ["#4477AA", "#EE6677", "#228833", "#CCBB44", "#66CCEE", "#AA3377", "#BBBBBB"]},
           "legend": {
             "orient": "right",
             "padding": 5,
