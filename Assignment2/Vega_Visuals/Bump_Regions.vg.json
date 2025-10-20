@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "padding": 20,
   "vconcat": [
     {
       "params": [
