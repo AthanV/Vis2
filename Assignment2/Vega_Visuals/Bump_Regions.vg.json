@@ -62,7 +62,7 @@
         "tooltip": [
           {"field": "State", "type": "nominal"},
           {"field": "Year", "type": "ordinal"},
-          {"field": "Growth", "type": "quantitative", "format": ".2f"},
+          {"field": "Growth", "type": "quantitative", "format": ".2f", "title": "Growth(%)"},
           {"field": "rank", "type": "quantitative"}
         ]
       }
