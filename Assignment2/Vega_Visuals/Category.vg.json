@@ -1,7 +1,6 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "padding": {"right": 30, "left": 10, "top": 10, "bottom": 10},
   "title": "Tourism Distribution by Category",
   "width": "500",
   "height": 300,
@@ -29,8 +28,11 @@
   "layer": [{
   "mark": "bar",
   "encoding": {
-    "x": {"aggregate": "sum", "field": "Trips", "title": "Trips", "scale": {"domain": [0,4000,8000,12000,16000,20000,24000,28000,32000]}},
-    "y": {"field": "State", "title": null},
+    "x": {"aggregate": "sum", "field": "Trips", "title": "Trips", "scale": {"domain": [0, 32000]},
+  "axis": {"values": [0, 4000, 8000, 12000, 16000, 20000, 24000, 28000, 32000]}},
+    "y": {"field": "State", "title": null, "scale": {
+    "domain": ["NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT"]
+  }},
     "color": {"field": "Reason", "legend": null, "scale": {"range": ["#E1BE6A", "#40B0A6", "#E66100", "#5D3A9B"]}},
     "tooltip": [
   {"field": "Reason", "type": "nominal", "title": "Reason"},
