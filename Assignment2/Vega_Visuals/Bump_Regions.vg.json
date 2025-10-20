@@ -13,7 +13,7 @@
       "params": [
         {
           "name": "state_highlight",
-          "select": {"type": "point", "fields": ["State"], "clear": false},
+          "select": {"type": "point", "fields": ["State"]},
           "bind": "legend",
           "value": [{"State": "Victoria"}]
         }
