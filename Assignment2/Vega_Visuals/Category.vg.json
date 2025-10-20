@@ -29,7 +29,7 @@
   "layer": [{
   "mark": "bar",
   "encoding": {
-    "x": {"aggregate": "sum", "field": "Trips", "title": "Trips"},
+    "x": {"aggregate": "sum", "field": "Trips", "title": "Trips", "scale": {"domain": [0,4000,8000,12000,16000,20000,24000,28000,32000]}},
     "y": {"field": "State", "title": null},
     "color": {"field": "Reason", "legend": null, "scale": {"range": ["#E1BE6A", "#40B0A6", "#E66100", "#5D3A9B"]}},
     "tooltip": [
