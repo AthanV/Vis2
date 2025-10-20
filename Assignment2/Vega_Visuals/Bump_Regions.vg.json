@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "padding": 20,
   "vconcat": [
     {
       "params": [
@@ -11,7 +12,7 @@
         }
       ],
       "title": "State Tourism Growth Over The Years",
-      "width": "450",
+      "width": "container",
       "height": 300,
       "description": "Bump chart showing ranking of states by population growth over time",
       "data": {
