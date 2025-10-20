@@ -8,7 +8,7 @@
     }
   },
   "title": "Tourism Trips per 1000 People in Australia",
-  "width": "500",
+  "width": "container",
   "height": 300,
   "projection": {"type": "mercator"},
   "params": [
